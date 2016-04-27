@@ -1,0 +1,91 @@
+.part2{
+	padding: 1.5rem 1rem 1rem;
+
+	img{
+		width: 50%;
+		height: auto;
+		float: left;
+		margin-bottom: 1rem;
+	}
+
+	.photoThird{
+		width: 40%;
+		margin: 1.5rem 0 0 7%;
+	}
+
+	.photo-text{
+		float: right;
+		font-size: 14px;
+		margin: 0 1rem 1rem;
+		padding: 1rem;
+		font-weight: 500;
+		background: $part1-color;
+	}
+}
+
+
+@media screen and (min-width: 720px){
+.part2{
+
+	h5:first-of-type,
+	p:first-of-type{
+		margin-left: 25rem;
+	}
+
+	.photoThird{
+		margin-bottom: 3rem;
+	}
+
+	}
+}
+
+@media screen and (min-width: 1640px){
+
+.part2{
+	max-width: 1640px;
+	margin: 0 auto;
+	padding: 0;
+
+	img{
+		margin-top: 3.2rem;
+		max-width: 415px;
+	}
+	.photoThird{
+		max-width: 285px;
+		margin: 7.5rem 4.25rem 0 3.4rem;
+	}
+
+	h5{
+		margin-left: 49rem;
+	}
+
+	h5:first-of-type{
+		padding-top: 9.7rem;
+
+	}
+
+	p{
+		margin-left: 49rem;
+	}
+
+	.photo-text{
+		float: none;
+		background: transparent;
+		width: 33rem;
+		margin: 6.75rem 0 8.125rem 51rem;
+		text-align: center;
+		font-size: 1.25rem;
+		padding: 0;
+		padding-left: 2.5rem;
+	}
+	h5:last-of-type,
+	p:last-of-type{
+		margin-left: 33rem;
+		width: 42rem;
+	}
+
+	p:last-of-type{
+		margin-bottom: 0;
+	}
+}
+}

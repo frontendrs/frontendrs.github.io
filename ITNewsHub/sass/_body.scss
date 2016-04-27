@@ -1,0 +1,41 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	position: relative;
+}
+
+.wrap{
+	min-width: 320px;
+	margin: 0 auto;
+	}
+
+.clear-fix::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+
+@media screen and (min-width: 768px){
+
+.pop-up-blue{
+	width: 100vw;
+	height: 260vh;
+	background: rgba(84, 132,187,0.2);
+	position: absolute;
+	top: 0;
+	display: none;
+
+}
+}
+
+@media screen and (min-width: 1280px){
+
+.pop-up-blue{
+	height: 154vh;
+}
+}

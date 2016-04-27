@@ -1,0 +1,120 @@
+header{
+
+	a{
+		display: block;
+		text-decoration: none;
+		color: #000;
+		font-size: 13px;
+		font-weight: 600;
+	}
+	
+	.logo{
+		float: left;
+		padding: 16px 0 16px 10px;
+		margin-right: 2%;
+
+		@include media(">desktop") {
+			margin-right: 10px;
+		}
+
+		&::before{
+			content: '';
+			display: block;
+			float: left;
+			@include icons-sprite(logo);
+		}
+
+	span{
+		display: none;
+		float: left;
+		@include icons-sprite(logo-text);
+		margin-left: 8px;
+		margin-top: 8px;
+
+		@include media(">desktop") {
+			display: block;
+			}
+		} 
+	}
+
+
+	.sections{
+		float: left;
+		line-height: 68px;
+		width: 40.5%;
+		text-align: center;
+		letter-spacing:0.14px;
+
+		@include media(">tablet") {
+			width: 14%;
+			max-width: 150px;
+		}
+
+		@include media(">desktop") {
+			font-size: 16px;
+		}
+		
+		&:hover{
+			opacity: 0.5px;
+		}
+
+	&-writers{
+		background:#f0f1f2;
+	}
+}
+	.register-wrap{
+		width: 100%;
+		clear: both;
+
+		@include media(">tablet") {
+			width: auto;
+			float: left;
+			clear: none;
+		}
+
+		@include media(">desktop") {
+			margin-right: 38px;
+			float: right;
+		}
+	}
+	.login,
+	.register{
+		line-height: 40px;
+		margin: 14px 6px 0;
+		border-radius: 5px;
+		float: left;
+		text-align: center;
+		// width: 13%;
+
+		@include media(">desktop") {
+			margin: 14px 7px 0;
+			font-size: 16px;
+		}
+
+		&:hover{
+			opacity: 0.5;
+		}
+	}
+
+	.login{
+		max-width: 48px;
+	}
+
+	.register{
+		color: #fff;
+		width: 38%;
+
+		@include media(">tablet") {
+			width: 217px;
+		}
+
+		&-writer{
+			background:#7ed321;
+		}
+
+		&-client{
+			background: $blue;
+		}
+	}
+
+}

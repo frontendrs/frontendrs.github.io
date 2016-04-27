@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'CodePro';
+	src: url('../fonts/Code Pro Light.otf') format('opentype');
+	font-weight: normal;
+}
+
+ @font-face {
+	font-family: 'MuseoSans';
+	src: url('../fonts/MuseoSansCyrl.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+ @font-face {
+	font-family: 'MuseoSans';
+	src: url('../fonts/MuseoSansCyrl_0.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+ @font-face {
+	font-family: 'MuseoSans';
+	src: url('../fonts/MuseoSansCyrl_1.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+ @font-face {
+	font-family: 'MuseoSans';
+	src: url('../fonts/MuseoSansCyrl_2.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+ @font-face {
+	font-family: 'MuseoSans';
+	src: url('../fonts/MuseoSansCyrl_3.otf') format('opentype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+$part1-color: #f6f6f6;
+$text-color: #262626;
+$button-color: #e8dadc;

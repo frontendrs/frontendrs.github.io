@@ -1,0 +1,129 @@
+.collection{
+	padding: 2rem 0;
+	border-bottom: 1px solid #f6f6f6;
+	position: relative;
+
+	h2{
+		font-family: 'Playfair Display', serif;
+		font-style: italic;
+		font-size: 1.2em;
+		padding-left: 1rem;
+		margin-bottom: 3rem;
+	}
+
+	.slide{
+		width: 50%;
+		float: left;
+		padding-bottom: 2.5rem;
+
+		img{
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		h6{
+			text-align: center;
+			font-weight: 900;
+			font-size: 0.77rem;
+			letter-spacing: 0.2em;
+		}
+
+		span{
+			display: block;
+			text-align: center;
+			font-size: 0.75em;
+			margin-top: 9px;
+		}
+	}
+
+	.slide{
+		display: none;
+	}
+
+	.slide-mobile{
+		display: block;
+	}
+
+	button{
+		display: block;
+		width: 2rem;
+		line-height: 2rem;
+		background: $button-color;
+		opacity: 0.5;
+		border: none;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		cursor: pointer;
+		margin-left: 0.5rem;
+		z-index: 2;
+	}
+	.btn-next{
+		right: 0.5rem;
+		z-index: 2;
+
+	}
+
+	.rbtn-wrap{
+		clear: both;
+		background: green;
+		width: 6.25rem;
+		margin: 0 auto 3rem;
+		display: none;
+
+
+	}
+
+	label{
+		display: block;
+		float: left;
+		width: 0.5rem;
+		height: 0.5rem;
+		margin: 0 0.25rem;
+		border-radius: 50%;
+		background: #c2c2c2;
+	}
+
+	input{
+			display: none;
+		}
+
+	#btn1:checked~label[for="btn1"],
+	#btn2:checked~label[for="btn2"],
+	#btn3:checked~label[for="btn3"]{
+		background: black;
+	}
+
+
+}
+
+@media screen and (min-width: 1640px){
+	.collection{
+		max-width: 1640px;
+		margin: 0 auto;
+		padding: 0;
+
+		h2{
+			margin-top: 3.5rem;
+			font-size: 2.06rem;
+		}
+
+		.slide{
+			width: 20%;
+		}
+
+		.slide-desktop{
+			display: block;
+		}
+
+		button{
+			display: none;
+		}
+
+
+		.rbtn-wrap{
+			display: block;
+		}
+	}
+
+}

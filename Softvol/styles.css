@@ -1,0 +1,27 @@
+body{
+	margin: 0;
+	height: 200vw;
+}
+
+.container{
+	width: 500px;
+	height: 200px;
+	margin: 0 auto;
+	border: 1px dashed #333;
+	position: relative;
+}
+
+header{
+	width: 500px;
+	height: 50px;
+	background: #086A87;
+}
+
+.head1{
+	background: #F78181;
+}
+
+.sticky{
+	position: sticky;
+	top: 0;
+}

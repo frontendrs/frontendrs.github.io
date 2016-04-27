@@ -1,0 +1,90 @@
+aside{
+	padding: 0 16px;
+
+	@include media(">desktop") {
+			width: 25%;
+			float: left;
+		}
+
+	.aside-wrap{
+
+		@include media(">tablet") {
+			width: 30%;
+			margin: 1%;
+			float: left;
+		}
+
+		@include media(">desktop") {
+			width: 100%;
+			margin: 0;
+			float: none;
+		}
+	}
+
+	.aside-head{
+		font-size: 15px;
+		line-height: 20px;
+		margin: 12px 0;
+
+		&::before{
+			content: '';
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+
+		&-expetrises{
+
+			&::before{
+				@include icons-sprite(expertises);
+			}
+		}
+
+		&-categories{
+
+			&::before{
+				@include icons-sprite(categories);
+			}
+		}
+
+		&-languages{
+
+			&::before{
+				@include icons-sprite(languages);
+			}
+		}
+
+		&-country{
+
+			&::before{
+				@include icons-sprite(country);
+			}
+		}
+
+		&-cities{
+
+			&::before{
+				@include icons-sprite(cities);
+			}
+		}
+	}
+
+	ul{
+		list-style: none;
+		margin: 0;
+		margin-bottom: 18px;
+		padding-left: 32px;
+
+		a{
+			display: block;
+			line-height: 32px;
+			color: $blue;
+			text-decoration: none;
+			font-size: 14px;
+
+			&:hover{
+				opacity: 0.5;
+			}
+		}
+	}
+}

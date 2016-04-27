@@ -1,0 +1,96 @@
+.part1{
+	width: 100%;
+	background: $part1-color;
+	padding: 1rem;
+
+	img{
+		width: 55%;
+		height: auto;
+		float: left;
+		margin-bottom: 1rem;
+	}
+
+	h3{
+		float: right;
+		width: 45%;
+		font-size: 1.125em;
+		font-weight: 300;
+		text-align: center;
+		margin: 1em 0 0.5em;
+		letter-spacing: 0.2em;
+	}
+
+	h1{
+		float: right;
+		width: 45%;
+		font-size: 1.5em;
+		font-weight: normal;
+		text-align: center;
+		letter-spacing: 0.2em;
+		margin-bottom: 55px;
+		font-family: 'CodePro';
+	}
+}
+
+@media screen and (min-width: 720px){
+.part1{
+
+	img{
+		width: 420px;
+	}
+
+	h3{
+		width: calc(100% - 420px);
+	}
+
+	h1{
+		width: calc(100% - 420px);
+	}
+}
+}
+
+@media screen and (min-width: 1640px){
+
+.part1{
+
+	.wrap{
+		max-width: 1640px;
+		margin: 0 auto;
+	}
+
+	img{
+		width: 520px;
+		margin: 10rem 0 0 0 ;
+	}
+
+	h3{
+		width: calc(100% - 520px);
+		font-size: 1.375em;
+		text-align: left;
+		padding-left: 10rem;
+		margin-top: 5rem;
+	}
+
+	h1{
+		width: calc(100% - 520px);
+		font-size: 2.8em;
+		margin-bottom: 150px;
+		text-align: left;
+		padding-left: 4.5rem;
+	}
+
+	h5{
+		max-width: 720px;
+		margin-left: 520px;
+		/*margin: 1em 0;*/
+	}
+
+	p{
+		max-width: 720px;
+		margin-left: 520px;
+		margin-bottom: 75px;
+
+}
+
+}
+}

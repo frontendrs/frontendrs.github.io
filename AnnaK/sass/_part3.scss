@@ -1,0 +1,69 @@
+.part3{ 
+	padding: 0 1rem ;
+
+	img{
+		display: block;
+		width: 70%;
+		max-width: 31rem;
+		height: auto;
+		margin: 0 auto 1rem;
+	}
+
+	.social-wrap{
+		margin: 3rem 0 1rem;
+
+		a{
+			display: block;
+			width: 20px;
+			height: 14px;
+			background: url('../img/sprite.png') no-repeat 2px 0;
+			float: left;
+			margin-right: 7px;
+
+			&:hover{
+				opacity:0.5;
+			}
+		}
+
+		.vk{
+			background-position-x: -27px;
+			margin-right: 16px;
+		}
+		.google-plus{
+			background-position-x: -62px;
+		}
+	}
+}
+@media screen and (min-width: 1640px){
+
+.part3{
+	max-width: 1640px;
+	margin: 0 auto;
+	padding: 0;
+
+	img{
+		margin: 4.875rem 0 0 5rem;
+		float: left;
+
+	}
+
+	h5{
+		margin-left: 41rem;
+	}
+
+	h5:first-of-type{
+		padding-top: 16.25rem;
+
+	}
+
+	p{
+		margin-left: 41rem;
+		width: 47rem;
+	}
+
+	.social-wrap{
+		margin: 0 0 0 41rem;
+	}
+
+}
+}

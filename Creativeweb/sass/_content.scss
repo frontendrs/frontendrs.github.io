@@ -1,0 +1,287 @@
+.main{
+	background: $blue-very-light;
+
+	.wrap{
+		@include media(">desktop") {
+			padding: 0 40px 0;
+		}
+	}
+
+	h1{
+		font-size: 26px;
+		width: 150px;
+		margin: 0 20px;
+
+		a{
+			font-size: 14px;
+			color: $blue;
+			text-decoration: none;
+			vertical-align: middle;
+		}
+	}
+}
+
+	main{
+		padding: 8px;
+
+		@include media(">desktop") {
+			width: 75%;
+			float: left;
+		}
+	}
+
+	.writer-section{
+		max-width: 826px;
+		padding: 8px 8px 8px 0;
+		background: #fff;
+		margin: 16px 0;
+		border-radius: 5px;
+		position: relative;
+
+		@include media(">desktop") {
+			padding: 20px 41px 33px 33px;
+		}
+
+		.avatar{
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			overflow: hidden;
+			float: left;
+
+			@include media(">phone") {
+				margin-bottom: 30px;
+			}
+		}
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+
+		.info{
+			position: relative;
+
+			@include media(">desktop") {
+				float: left;
+				padding-bottom: 4px;
+				width: 656px;
+				}
+
+			&::before{
+				content: '';
+				width: 634px;
+				margin-right: 12px;
+				border-bottom:1px solid #dddddd;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				display: none;
+
+			@include media(">desktop") {
+				display: block;
+				}
+			}
+
+			.name{
+				display: block;
+				font-size: 15px;
+				line-height:22px;
+			}
+
+			.india{
+
+				&::after{
+					display: inline-block;
+					content: '';
+					margin-left: 4px;
+					@include icons-sprite(flag);
+					}
+				}
+
+			.ukraine{
+
+				&::after{
+					display: inline-block;
+					content: '';
+					margin-left: 4px;
+					@include icons-sprite(flag-ua);
+					}
+				}
+
+			&-container{
+				float: left;
+				margin: 4px 2%;
+				width: 32%;
+				height: 40px;
+
+				@include media(">tablet") {
+					width: 18%;
+					margin: 4px 1%;
+				}
+				
+				@include media(">desktop") {
+					min-width: 75px;
+					width: auto;
+					margin: 4px 11px;
+				}
+
+				&-first{
+					height: 60px;
+
+					@include media(">phone") {
+						height: 40px;
+					}
+				}
+
+				.icon-container{
+					padding-top: 5px;
+					height:22px;
+				}
+
+				i{
+					display: block;
+					float: left;
+					@include icons-sprite(star-full);
+				}
+
+				.star-half{
+					@include icons-sprite(star-half);
+				}
+
+				.star-empty{
+					@include icons-sprite(star-empty);
+				}
+			}
+
+			&-small{
+				display: block;
+				font-size: 10px;
+				line-height: 15px;
+				color:#141414;
+				font-weight: 400;
+				}
+
+			&-big{
+				font-size: 15px;
+				}
+
+			&-portfolio{
+				color: $blue;
+
+				&-big{
+					text-transform: uppercase;
+					font-size: 14px;
+					}
+				}
+
+			&-hire{
+				display: block;
+				float: left;
+				width: 58%;
+				max-width: 200px;
+				margin: 4px 2%;
+				border-radius: 5px;
+				line-height: 40px;
+				background: $blue;
+				color: #fff;
+				text-decoration: none;
+				font-size: 14px;
+				text-transform: uppercase;
+				text-align: center;
+
+				@include media(">tablet") {
+					margin: 4px 1%;
+				}
+
+				@include media(">desktop") {
+					width: 84px;
+					line-height: 33px;
+					margin: 4px 12px;
+				}
+
+				&:hover{
+					opacity: 0.5;
+				}
+			}
+		}
+
+	p{
+		font-size: 13px;
+		line-height: 21px;
+
+		@include media(">phone") {
+			width: 48%;
+			float: left;
+			margin: 16px 1% 0;
+		}
+
+		@include media(">desktop") {
+			width: 41%;
+			margin: 0 11px;
+		}
+	}
+}
+
+.help{
+	@include media(">desktop") {
+		float: right;
+	}
+}
+
+.verified{
+		width: 80px;
+		position: absolute;
+		top: 95px;
+		text-align: center;
+
+		@include media(">desktop") {
+			top: 105px;
+		}
+
+		span{
+			display: block;
+			font-size: 8px;
+			color:#6ab31b;
+		}
+
+		&-big{
+			font-size: 12px;
+			font-weight: 700;
+		}
+
+		&::before{
+			content: '';
+			display: block;
+			@include icons-sprite(logo-small);
+			position: absolute;
+			top: -20px;
+			right: 0;
+		}
+
+		div{
+			width: 230px;
+			padding: 10px 7px;
+			background: #192937;
+			color: #fff;
+			font-size: 11px;
+			position: relative;
+			top: 8px;
+			display: none;
+
+			&::before{
+				content: '';
+				display: block;
+				position: absolute;
+				top: -5px;
+				left: 40px;
+				border-bottom: 5px solid #192937;
+				border-right: 5px solid transparent;
+				border-left: 5px solid transparent;
+			}
+		}
+
+		&:hover div{
+			display: block;
+		}
+}

@@ -1,0 +1,89 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: 'MuseoSans';
+	margin: 0;
+
+	h5{
+		clear: both;
+		font-weight: 500;
+		font-size: 0.75em;
+		line-height: 1.5;
+		margin: 1em 0;
+		color: $text-color;
+	}
+
+	p{
+		line-height: 1.5;
+		text-align: justify;
+		margin-bottom: 2.2rem;
+		font-size: 0.75em;
+		color: $text-color;
+
+		&:last-of-type{
+			margin-bottom: 1em;
+		}
+	}
+
+.clear-fix::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.modal{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+
+	&-window{
+		width: 300px;
+		height: 200px;
+		padding: 2rem 1rem;
+		background: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -150px;
+		margin-top: -100px;
+		}
+
+		& .btn-ok{
+			width: 16px;
+			line-height: 16px;
+			text-align: center;
+			background: $button-color;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			cursor: pointer;
+	}
+}
+}
+
+@media screen and (min-width: 720px){
+	body{
+		h5{
+			clear: none;
+			font-size: 0.94em;
+		}
+		p{
+			font-size: 0.94em;
+			text-align: left;
+		}
+
+	}
+}
+@media screen and (min-width: 1640px){
+	body{
+
+		h5{
+			margin-bottom: 1.375rem;
+		}
+	}
+}
