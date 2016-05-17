@@ -1,0 +1,77 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	font-family: Futura;
+	color: $dark-grey;
+}
+
+a:hover{
+	opacity: 0.5;
+}
+
+.wrap{
+	width: 58.75rem;
+	padding: 0 10px;
+	margin: 0 auto;
+
+	@include media("<=desktop") {
+	width: 100%;
+	}
+}
+
+.clear-fix::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.header{
+	width: 58.75rem;
+	margin: 0 auto;
+	padding: 10px 10px 10px 0;
+
+	@include media("<=desktop") {
+	width: 100%;
+	}
+}
+
+.logo{
+	display: block;
+	width: 12.5rem;
+	height: 3.25rem;
+	margin: 0 auto;
+	background: url('../img/logo.png') no-repeat;
+
+	@include media("<tablet") {
+		clear: both;
+	}
+}
+
+.button{
+	display: block;
+	text-decoration: none;
+	width: 4.2rem;
+	line-height: 1.875rem;
+	border-radius: 5px;
+	float: right;
+	text-align: center;
+	margin-top: 10px;
+
+	&-color{
+		background: $light-blue;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 0.75em;
+	}
+
+	&-transparent{
+		color: $light-blue;
+		font-family: "Justus Italic";
+		font-size: 0.785em;
+	}
+}
+	
+

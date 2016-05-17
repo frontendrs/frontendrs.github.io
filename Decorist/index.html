@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="decorist">
+<head>
+	<meta charset="UTF-8">
+	<title>Decorist</title>
+	<link href="stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header class="header clear-fix">
+		<a href="#" class="button button-color">Login</a>
+		<a href="#" class="button button-transparent">Help</a>
+		<a href="#" class="logo"></a>
+	</header>
+	<main>
+		<div class="wrap clear-fix">
+			<h1>complete your order</h1>
+			<h2>Making interior design personal, affordable and easy</h2>
+			<nav class="nav">
+				<div class="nav-item active">View Cart</div>
+				<div class="nav-item">Payment</div>
+				<div class="nav-item">Additional Info</div>
+			</nav>
+			<img src="img/photo1.jpg" alt="" class="shopping-photo">
+			<cart></cart>
+			<!-- <div class="shopping-card clear-fix">
+				<h3>Your Shopping Cart</h3>
+				<a href="#" class="shopping-card-continue">Continue shopping</a>
+				<table class="shopping-card-list">
+					<thead>
+						<tr>
+							<td class="shopping-card-list-item">item</td>
+							<td class="shopping-card-list-quantity">quantity</td>
+							<td class="shopping-card-list-price">price</td>
+							<td class="shopping-card-list-change">change</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+							<img src="img/photo2.png" alt=""><span class="item-name">PERSONAL SHOPPER PACKAGE</span>
+							</td>
+							<td>
+								<button>-</button>
+								<span class="counter">1</span>
+								<button>+</button>
+							</td>
+							<td>$69.00</td>
+							<td>
+								<button class="remove">x</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="shopping-card-summary">
+					<tfoot>
+						<tr>
+							<td><a href="#">add promo code</a></td>
+							<td>total</td>
+							<td>$69.00</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td></td>
+							<td>subtotal</td>
+							<td>$69.00</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>tax</td>
+							<td>$0.00</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>shipping</td>
+							<td>$0.00</td>
+						</tr>
+					</tbody>
+				</table>
+				<a href="#" class="button button-color">next - payment</a>
+				<a href="#" class="button button-transparent">Happiness Guarantee!</a>
+			</div>
+					</div> -->
+	</main>
+	<footer class="footer clear-fix">
+		<div class="wrap">
+			<a href="#" class="logo footer-logo"></a>
+			<ul>
+				<li><h3>Stay in touch</h3></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">pinterest</a></li>
+				<li><a href="#">email</a></li>
+			</ul>
+			<ul>
+				<li><h3>about</h3></li>
+				<li><a href="#">what is decorist?</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">meet our designers</a></li>
+				<li><a href="#">terms of service</a></li>
+				<li><a href="#">privacy policy</a></li>
+			</ul>
+			<ul>
+				<li><h3>design</h3></li>
+				<li><a href="#">finds for you</a></li>
+				<li><a href="#">designer advice</a></li>
+				<li><a href="#">create a board</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<script src="js/lib/angular.min.js"></script>
+	<script src="js/lib/angular-ui-router.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/cart.js"></script>
+</body>
+</html>

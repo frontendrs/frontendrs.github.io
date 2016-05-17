@@ -1,0 +1,106 @@
+.form-paymnet{
+	padding-top: 15px;
+
+	label{
+		display: block; 
+		text-transform: uppercase;
+		font-size: 0.625em;
+		color: #666;
+		margin-bottom: 10px;
+
+		&.for-first-name,
+		&.for-last-name{
+			float: left;
+		}
+
+		&.for-zip-code{
+			clear: both;
+		}
+
+		&.for-date-mounth{
+			margin: 0;
+		}
+
+		&.for-cvv{
+			float: left;
+			margin-left: 10px;
+		}
+
+		&.for-save-card{
+			clear: both;
+			position: relative;
+			margin: 0;
+
+			&::after{
+				content: '';
+				display: block;
+				width: 100%;
+				border-top: 1px solid $border-grey;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	input{
+		display: block;
+		width: 190px;
+		line-height: 30px;
+		border: 1px solid $input-grey;
+		border-radius: 5px;
+		margin: 5px 10px 0 0;
+		padding-left: 10px;
+
+		&[type="checkbox"]{
+			width: auto;
+			float: left;
+			margin: 0 5px 0 0;
+		}
+
+		&.zip-code{
+			width: 100px;
+		}
+
+		&.card-number{
+			width: 260px;
+		}
+
+		&.cvv{
+			width: 50px;
+		}
+	}
+
+	fieldset{
+		width: 150px;
+		float: left;
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	select{
+		display: block;
+		float: left;
+		width: 60px;
+		height: 30px;
+		border: 1px solid $input-grey;
+		border-radius: 5px;
+		padding: 0 10px;
+		overflow: hidden;
+		background: url('../img/select-errow.jpg') no-repeat 90% 50%;
+		margin: 5px 10px 15px 0;
+
+	&[name="date-year"]{
+		width: 70px;
+		padding: 0 0 0 10px;
+	}
+
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+}

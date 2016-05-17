@@ -1,0 +1,786 @@
+@font-face {
+  font-family: Futura;
+  src: url(../fonts/16020_FUTURAM.ttf);
+}
+@font-face {
+  font-family: "Justus Italic";
+  src: url(../fonts/Justus-ItalicOldstyle.ttf);
+}
+/* line 1, ../sass/_body-head.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/_body-head.scss */
+body {
+  margin: 0;
+  font-family: Futura;
+  color: #222;
+}
+
+/* line 11, ../sass/_body-head.scss */
+a:hover {
+  opacity: 0.5;
+}
+
+/* line 15, ../sass/_body-head.scss */
+.wrap {
+  width: 58.75rem;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+@media (max-width: 960px) {
+  /* line 15, ../sass/_body-head.scss */
+  .wrap {
+    width: 100%;
+  }
+}
+
+/* line 25, ../sass/_body-head.scss */
+.clear-fix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* line 31, ../sass/_body-head.scss */
+.header {
+  width: 58.75rem;
+  margin: 0 auto;
+  padding: 10px 10px 10px 0;
+}
+@media (max-width: 960px) {
+  /* line 31, ../sass/_body-head.scss */
+  .header {
+    width: 100%;
+  }
+}
+
+/* line 41, ../sass/_body-head.scss */
+.logo {
+  display: block;
+  width: 12.5rem;
+  height: 3.25rem;
+  margin: 0 auto;
+  background: url("../img/logo.png") no-repeat;
+}
+@media (max-width: 767px) {
+  /* line 41, ../sass/_body-head.scss */
+  .logo {
+    clear: both;
+  }
+}
+
+/* line 53, ../sass/_body-head.scss */
+.button {
+  display: block;
+  text-decoration: none;
+  width: 4.2rem;
+  line-height: 1.875rem;
+  border-radius: 5px;
+  float: right;
+  text-align: center;
+  margin-top: 10px;
+}
+/* line 63, ../sass/_body-head.scss */
+.button-color {
+  background: #78a8bb;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+/* line 70, ../sass/_body-head.scss */
+.button-transparent {
+  color: #78a8bb;
+  font-family: "Justus Italic";
+  font-size: 0.785em;
+}
+
+/* line 1, ../sass/_nav.scss */
+main {
+  background: #fafafa;
+  padding: 40px 0 60px 0;
+}
+/* line 5, ../sass/_nav.scss */
+main h1 {
+  font-size: 1.75em;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+}
+@media (max-width: 768px) {
+  /* line 5, ../sass/_nav.scss */
+  main h1 {
+    font-size: 1.5rem;
+  }
+}
+/* line 17, ../sass/_nav.scss */
+main h2 {
+  font-size: 1.125em;
+  margin: 0;
+  font-family: "Justus Italic";
+  text-align: center;
+  color: #999;
+  font-weight: normal;
+}
+/* line 26, ../sass/_nav.scss */
+main .nav {
+  counter-reset: nav;
+  width: 44em;
+  width: 77%;
+  margin: 2.125em auto 1.875em;
+  padding-left: 1.6rem;
+  position: relative;
+}
+@media (max-width: 767px) {
+  /* line 26, ../sass/_nav.scss */
+  main .nav {
+    width: 100%;
+    padding: 0;
+  }
+}
+/* line 39, ../sass/_nav.scss */
+main .nav::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-bottom: 1px solid #f6f6f6;
+  position: absolute;
+  top: 28%;
+  left: 0;
+}
+/* line 50, ../sass/_nav.scss */
+main .nav-item {
+  color: #999;
+  font-size: 1.125em;
+  display: inline-block;
+  margin: 0 4rem;
+  text-align: center;
+  font-family: "Justus Italic";
+}
+@media (max-width: 960px) {
+  /* line 50, ../sass/_nav.scss */
+  main .nav-item {
+    margin: 0 7%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 50, ../sass/_nav.scss */
+  main .nav-item {
+    width: 11%;
+    min-width: 92px;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}
+/* line 69, ../sass/_nav.scss */
+main .nav-item::before {
+  counter-increment: nav;
+  content: counter(nav);
+  display: block;
+  position: relative;
+  width: 2rem;
+  line-height: 2rem;
+  margin: 0 auto;
+  font-size: 0.875rem;
+  background: #fafafa;
+  border: 1px solid #999;
+  border-radius: 50%;
+  text-align: center;
+  font-family: Futura;
+  z-index: 2;
+}
+/* line 86, ../sass/_nav.scss */
+main .nav-item.active {
+  color: #222;
+}
+/* line 89, ../sass/_nav.scss */
+main .nav-item.active::before {
+  border-color: #222;
+}
+
+/* line 1, ../sass/_shopping-card.scss */
+.shopping-card {
+  float: left;
+  width: 66%;
+  padding: 10px 20px 30px;
+  background: #fff;
+  position: relative;
+}
+@media (max-width: 767px) {
+  /* line 1, ../sass/_shopping-card.scss */
+  .shopping-card {
+    width: 100%;
+    float: none;
+    padding: 10px 10px 30px;
+  }
+}
+/* line 14, ../sass/_shopping-card.scss */
+.shopping-card h3 {
+  font-size: 1.125em;
+  font-family: "Justus Italic";
+  font-weight: normal;
+  margin: 15px 0 0 0;
+  position: relative;
+}
+/* line 21, ../sass/_shopping-card.scss */
+.shopping-card h3::after {
+  content: '';
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #fcfcfc;
+  margin-top: 12px;
+}
+/* line 29, ../sass/_shopping-card.scss */
+.shopping-card h3 span {
+  color: #999;
+}
+/* line 34, ../sass/_shopping-card.scss */
+.shopping-card-continue {
+  display: block;
+  line-height: 24px;
+  font-size: 0.625em;
+  color: #78a8bb;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: absolute;
+  top: 28px;
+  left: 210px;
+}
+@media (max-width: 767px) {
+  /* line 34, ../sass/_shopping-card.scss */
+  .shopping-card-continue {
+    position: static;
+    margin: 10px 0;
+  }
+}
+/* line 51, ../sass/_shopping-card.scss */
+.shopping-card table {
+  width: 100%;
+  font-size: 0.625em;
+  text-transform: uppercase;
+  border-collapse: collapse;
+}
+/* line 61, ../sass/_shopping-card.scss */
+.shopping-card-list thead tr {
+  border-bottom: 1px solid #fcfcfc;
+  height: 30px;
+}
+/* line 68, ../sass/_shopping-card.scss */
+.shopping-card-list tbody td {
+  padding: 15px 0;
+}
+/* line 73, ../sass/_shopping-card.scss */
+.shopping-card-list-item {
+  width: 45%;
+}
+@media (max-width: 767px) {
+  /* line 73, ../sass/_shopping-card.scss */
+  .shopping-card-list-item {
+    width: 25%;
+  }
+}
+/* line 80, ../sass/_shopping-card.scss */
+.shopping-card-list-quantity, .shopping-card-list-price {
+  width: 17.2%;
+}
+@media (max-width: 767px) {
+  /* line 80, ../sass/_shopping-card.scss */
+  .shopping-card-list-quantity, .shopping-card-list-price {
+    width: 25%;
+  }
+}
+/* line 89, ../sass/_shopping-card.scss */
+.shopping-card-list img {
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-right: 10px;
+  float: left;
+}
+@media (max-width: 768px) {
+  /* line 89, ../sass/_shopping-card.scss */
+  .shopping-card-list img {
+    width: 25%;
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  /* line 89, ../sass/_shopping-card.scss */
+  .shopping-card-list img {
+    display: none;
+  }
+}
+/* line 104, ../sass/_shopping-card.scss */
+.shopping-card-list .item-name {
+  display: block;
+  float: left;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  /* line 104, ../sass/_shopping-card.scss */
+  .shopping-card-list .item-name {
+    line-height: 1.5;
+    padding-top: 15px;
+    width: 50%;
+  }
+}
+/* line 119, ../sass/_shopping-card.scss */
+.shopping-card-list button {
+  width: 11px;
+  line-height: 11px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: #78a8bb;
+  font-size: 9px;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+/* line 132, ../sass/_shopping-card.scss */
+.shopping-card-list .remove::after {
+  content: 'remove';
+  display: block;
+  color: #78a8bb;
+  text-transform: uppercase;
+  position: absolute;
+  left: 20px;
+  top: 0;
+}
+/* line 142, ../sass/_shopping-card.scss */
+.shopping-card-list .counter {
+  display: inline-block;
+  font-size: 10px;
+  margin: 0 10px;
+}
+@media (max-width: 767px) {
+  /* line 142, ../sass/_shopping-card.scss */
+  .shopping-card-list .counter {
+    margin: 0 5px;
+  }
+}
+/* line 155, ../sass/_shopping-card.scss */
+.shopping-card-summary {
+  background: #f7f7f7;
+  color: #999;
+}
+/* line 159, ../sass/_shopping-card.scss */
+.shopping-card-summary td {
+  vertical-align: bottom;
+  height: 24px;
+}
+/* line 164, ../sass/_shopping-card.scss */
+.shopping-card-summary td:nth-child(2),
+.shopping-card-summary td:nth-child(3) {
+  width: 70px;
+  padding-right: 40px;
+  text-align: right;
+}
+/* line 173, ../sass/_shopping-card.scss */
+.shopping-card-summary tfoot td {
+  height: 42px;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #222;
+}
+@media (max-width: 767px) {
+  /* line 173, ../sass/_shopping-card.scss */
+  .shopping-card-summary tfoot td {
+    font-size: 1em;
+  }
+}
+/* line 183, ../sass/_shopping-card.scss */
+.shopping-card-summary tfoot td a {
+  display: block;
+  padding-left: 1em;
+  color: #78a8bb;
+  text-decoration: none;
+}
+/* line 194, ../sass/_shopping-card.scss */
+.shopping-card .button {
+  width: 135px;
+  margin-top: 15px;
+  font-size: 12px;
+  font-family: Futura;
+}
+@media (max-width: 767px) {
+  /* line 194, ../sass/_shopping-card.scss */
+  .shopping-card .button {
+    width: 48%;
+    margin: 15px 1% 0;
+  }
+}
+
+/* line 207, ../sass/_shopping-card.scss */
+.shopping-photo {
+  display: block;
+  float: right;
+  width: 32%;
+  height: auto;
+  border: 3px solid #f2f2f2;
+}
+@media (max-width: 767px) {
+  /* line 207, ../sass/_shopping-card.scss */
+  .shopping-photo {
+    display: none;
+  }
+}
+
+/* line 1, ../sass/_footer.scss */
+.footer {
+  padding: 30px 0 60px 0;
+  background: #f0f0f0;
+}
+/* line 5, ../sass/_footer.scss */
+.footer-logo {
+  float: left;
+  transform: scale(0.75);
+  transform-origin: 0 0;
+}
+/* line 10, ../sass/_footer.scss */
+.footer ul {
+  width: 23.4%;
+  float: right;
+  margin: 0 0 0 20px;
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+}
+@media (max-width: 960px) {
+  /* line 10, ../sass/_footer.scss */
+  .footer ul {
+    width: 20%;
+    margin: 0 0 0 2%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 10, ../sass/_footer.scss */
+  .footer ul {
+    width: 100%;
+  }
+}
+/* line 27, ../sass/_footer.scss */
+.footer ul h3 {
+  margin: 0;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 34, ../sass/_footer.scss */
+.footer ul a {
+  display: block;
+  line-height: 26px;
+  font-size: 12px;
+  color: #78a8bb;
+  text-decoration: none;
+}
+
+/* line 1, ../sass/_payment-form.scss */
+.form-paymnet {
+  padding-top: 15px;
+}
+/* line 4, ../sass/_payment-form.scss */
+.form-paymnet label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.625em;
+  color: #666;
+  margin-bottom: 10px;
+}
+/* line 11, ../sass/_payment-form.scss */
+.form-paymnet label.for-first-name, .form-paymnet label.for-last-name {
+  float: left;
+}
+/* line 16, ../sass/_payment-form.scss */
+.form-paymnet label.for-zip-code {
+  clear: both;
+}
+/* line 20, ../sass/_payment-form.scss */
+.form-paymnet label.for-date-mounth {
+  margin: 0;
+}
+/* line 24, ../sass/_payment-form.scss */
+.form-paymnet label.for-cvv {
+  float: left;
+  margin-left: 10px;
+}
+/* line 29, ../sass/_payment-form.scss */
+.form-paymnet label.for-save-card {
+  clear: both;
+  position: relative;
+  margin: 0;
+}
+/* line 34, ../sass/_payment-form.scss */
+.form-paymnet label.for-save-card::after {
+  content: '';
+  display: block;
+  width: 100%;
+  border-top: 1px solid #fcfcfc;
+  margin-top: 15px;
+}
+/* line 44, ../sass/_payment-form.scss */
+.form-paymnet input {
+  display: block;
+  width: 190px;
+  line-height: 30px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  margin: 5px 10px 0 0;
+  padding-left: 10px;
+}
+/* line 53, ../sass/_payment-form.scss */
+.form-paymnet input[type="checkbox"] {
+  width: auto;
+  float: left;
+  margin: 0 5px 0 0;
+}
+/* line 59, ../sass/_payment-form.scss */
+.form-paymnet input.zip-code {
+  width: 100px;
+}
+/* line 63, ../sass/_payment-form.scss */
+.form-paymnet input.card-number {
+  width: 260px;
+}
+/* line 67, ../sass/_payment-form.scss */
+.form-paymnet input.cvv {
+  width: 50px;
+}
+/* line 72, ../sass/_payment-form.scss */
+.form-paymnet fieldset {
+  width: 150px;
+  float: left;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 80, ../sass/_payment-form.scss */
+.form-paymnet select {
+  display: block;
+  float: left;
+  width: 60px;
+  height: 30px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 0 10px;
+  overflow: hidden;
+  background: url("../img/select-errow.jpg") no-repeat 90% 50%;
+  margin: 5px 10px 15px 0;
+}
+/* line 92, ../sass/_payment-form.scss */
+.form-paymnet select[name="date-year"] {
+  width: 70px;
+  padding: 0 0 0 10px;
+}
+/* line 99, ../sass/_payment-form.scss */
+.form-paymnet input::-webkit-outer-spin-button,
+.form-paymnet input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/* line 1, ../sass/_aditional-info.scss */
+.notice {
+  float: left;
+  width: 66%;
+  line-height: 42px;
+  background: #ff5730;
+  font-size: 0.875em;
+  text-transform: uppercase;
+  color: #fff;
+  padding-left: 20px;
+  border-radius: 5px;
+  margin: 0 0 5px 0;
+}
+@media (max-width: 767px) {
+  /* line 1, ../sass/_aditional-info.scss */
+  .notice {
+    width: 100%;
+    float: none;
+  }
+}
+
+/* line 19, ../sass/_aditional-info.scss */
+.form {
+  color: #666;
+  font-size: 0.875em;
+  padding-top: 15px;
+}
+/* line 24, ../sass/_aditional-info.scss */
+.form label,
+.form input,
+.form span {
+  display: inline-block;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+/* line 32, ../sass/_aditional-info.scss */
+.form input {
+  width: 150px;
+}
+/* line 35, ../sass/_aditional-info.scss */
+.form input:nth-of-type(2) {
+  width: 200px;
+}
+/* line 40, ../sass/_aditional-info.scss */
+.form input,
+.form textarea {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  outline-color: #ff5730;
+  padding-left: 10px;
+}
+/* line 49, ../sass/_aditional-info.scss */
+.form textarea {
+  width: 100%;
+  height: 80px;
+  font-family: Futura;
+  line-height: 1.5;
+  padding: 10px;
+}
+@media (max-width: 320px) {
+  /* line 49, ../sass/_aditional-info.scss */
+  .form textarea {
+    height: 110px;
+  }
+}
+/* line 61, ../sass/_aditional-info.scss */
+.form .personal-recommendations {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  line-height: 1;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+/* line 69, ../sass/_aditional-info.scss */
+.form ::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 12px;
+}
+/* line 73, ../sass/_aditional-info.scss */
+.form ::-moz-placeholder {
+  color: #ccc;
+  font-size: 12px;
+}
+/* line 77, ../sass/_aditional-info.scss */
+.form :-moz-placeholder {
+  color: #ccc;
+  font-size: 12px;
+}
+/* line 81, ../sass/_aditional-info.scss */
+.form :-ms-input-placeholder {
+  color: #ccc;
+  font-size: 12px;
+}
+
+/* line 87, ../sass/_aditional-info.scss */
+.text-photos {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+/* line 95, ../sass/_aditional-info.scss */
+.upload-photoes {
+  height: 130px;
+  border: 1px solid #fcfcfc;
+  border-radius: 5px;
+  background: url("../img/downloadPhotos.png") no-repeat 50% 10px;
+  margin-bottom: 15px;
+}
+/* line 102, ../sass/_aditional-info.scss */
+.upload-photoes p {
+  width: 220px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #dedede;
+  text-align: center;
+  margin: 75px auto 0;
+}
+/* line 111, ../sass/_aditional-info.scss */
+.upload-photoes span {
+  font-size: 10px;
+  margin-right: 10px;
+}
+/* line 116, ../sass/_aditional-info.scss */
+.upload-photoes .photo-upload-label {
+  font-size: 10px;
+  color: #78a8bb;
+  cursor: pointer;
+}
+
+/* line 124, ../sass/_aditional-info.scss */
+input[type="file"] {
+  display: none;
+}
+
+/* line 130, ../sass/_aditional-info.scss */
+.form-additional label {
+  display: block;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+/* line 139, ../sass/_aditional-info.scss */
+.form-additional .link-pinterest-input {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* line 145, ../sass/_aditional-info.scss */
+.bord-upload-label {
+  margin-bottom: 20px;
+}
+/* line 148, ../sass/_aditional-info.scss */
+.bord-upload-label::after {
+  content: 'attach decorist design board';
+  display: block;
+  width: 240px;
+  height: 32px;
+  line-height: 32px;
+  background: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #78a8bb;
+  font-size: 0.75rem;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* line 165, ../sass/_aditional-info.scss */
+.buttons-container {
+  text-align: center;
+  margin-top: 5px;
+}
+/* line 169, ../sass/_aditional-info.scss */
+.buttons-container::before {
+  content: '';
+  display: block;
+  border-bottom: 1px solid #fcfcfc;
+  margin-bottom: 12px;
+}
+/* line 176, ../sass/_aditional-info.scss */
+.buttons-container .button {
+  display: inline-block;
+  float: none;
+  margin: 0;
+}
+/* line 182, ../sass/_aditional-info.scss */
+.buttons-container .button-draft {
+  width: 110px;
+  background: #f2f2f2;
+  text-transform: uppercase;
+  color: #78a8bb;
+  margin-right: 5px;
+}

@@ -1,0 +1,218 @@
+.shopping-card{
+	float: left;
+	width: 66%;
+	padding: 10px 20px 30px;
+	background: #fff;
+	position: relative;
+
+	@include media("<tablet") {
+		width: 100%;
+		float: none;
+		padding: 10px 10px 30px;
+		}
+
+	h3{
+		font-size: 1.125em;
+		font-family: "Justus Italic";
+		font-weight: normal;
+		margin: 15px 0 0 0;
+		position: relative;
+
+		&::after{
+			content: '';
+			display: block;
+			width: 100%;
+			border-bottom: 1px solid $border-grey;
+			margin-top: 12px;
+		}
+
+		span{
+			color: $light-grey;
+		}
+	}
+
+	&-continue{
+		display: block;
+		line-height: 24px;
+		font-size: 0.625em;
+		color: $light-blue;
+		text-transform: uppercase;
+		text-decoration: none;
+		position: absolute;
+		top: 28px;
+		left: 210px;
+
+		@include media("<tablet") {
+			position: static;
+			margin: 10px 0;
+		}
+	}
+
+	table{
+		width: 100%;
+		font-size: 0.625em;
+		text-transform: uppercase;
+		border-collapse: collapse;
+	}
+
+	&-list{
+
+		thead{
+			tr{
+				border-bottom: 1px solid $border-grey;
+				height: 30px;
+			}
+		}
+
+		tbody{
+			td{
+			padding: 15px 0;
+			}
+		}
+
+		&-item{
+			width: 45%;
+
+			@include media("<tablet") {
+			width: 25%;
+		}
+		}
+		&-quantity,
+		&-price{
+			width: 17.2%;
+
+			@include media("<tablet") {
+			width: 25%;
+		}
+		}
+
+		img{
+			width: 3.75rem;
+			height: 3.75rem;
+			margin-right: 10px;
+			float: left;
+
+			@include media("<=tablet") {
+			width: 25%;
+			height: auto;
+		}
+			@include media("<tablet") {
+			display: none;
+		}
+	}
+
+		.item-name{
+			display: block;
+			float: left;
+			height: 3.75rem;
+			line-height: 3.75rem;
+			vertical-align: middle;
+			// padding: 15px 0;
+
+			@include media("<=tablet") {
+				line-height: 1.5;
+				padding-top: 15px;
+				width: 50%;
+		}
+		}
+
+		button{
+			width: 11px;
+			line-height: 11px;
+			padding: 0;
+			border-radius: 50%;
+			border: none;
+			background: $light-blue;
+			font-size: 9px;
+			color: #fff;
+			position: relative;
+			cursor: pointer;
+		}
+
+		.remove::after{
+			content: 'remove';
+			display: block;
+			color: $light-blue;
+			text-transform: uppercase;
+			position: absolute;
+			left: 20px;
+			top: 0;
+		}
+
+		.counter{
+			display: inline-block;
+			font-size: 10px;
+			margin: 0 10px;
+
+			@include media("<tablet") {
+			margin: 0 5px;
+		}
+
+
+		}
+	}
+
+	&-summary{
+		background: #f7f7f7;
+		color: #999;
+
+		td{
+			vertical-align: bottom;
+			height: 24px;
+		}
+
+		td:nth-child(2),
+		td:nth-child(3){
+			width: 70px;
+			padding-right: 40px;
+			text-align: right;
+		}
+
+		tfoot{
+
+			td{
+				height: 42px;
+				vertical-align: middle;
+				font-size: 12px;
+				color: $dark-grey;
+
+				@include media("<tablet") {
+					font-size: 1em;
+				}
+
+				a{
+					display: block;
+					padding-left: 1em;
+					color: $light-blue;
+					text-decoration: none;
+
+				}
+			}
+		}
+	}
+
+	.button{
+		width: 135px;
+		margin-top: 15px;
+		font-size: 12px;
+		font-family: Futura;
+
+		@include media("<tablet") {
+			width: 48%;
+			margin: 15px 1% 0;
+		}
+	}
+}
+
+.shopping-photo{
+	display: block;
+	float: right;
+	width: 32%;
+	height: auto;
+	// height: 21.875rem;
+	border: 3px solid $almost-white-grey;
+
+		@include media("<tablet") {
+			display: none;
+		}
+}
