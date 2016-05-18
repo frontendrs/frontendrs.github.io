@@ -7,6 +7,12 @@ app.value('order', {
 		quantity: 1,
 		price: 69,
 		imgUrl: 'img/photo2.png'
+	},
+	{
+		itemName: 'new package',
+		quantity: 1,
+		price: 100,
+		imgUrl: 'img/photo2.png'
 	}],
 	tax: 0,
 	shipping: 0

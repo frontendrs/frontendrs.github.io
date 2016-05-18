@@ -183,6 +183,10 @@
 		border: none;
 		padding: 0;
 
+		&:disabled{
+			opacity: 0.2;
+		}
+
 		@include media("<tablet") {
 			width: 48%;
 			margin: 15px 1% 0;
