@@ -66,6 +66,11 @@ main{
 				margin: 0 5px;
 				}
 
+			@include media("<=phone") {
+				margin: 0;
+				}
+
+
 			&::before{
 				counter-increment: nav;
 				content: counter(nav);
