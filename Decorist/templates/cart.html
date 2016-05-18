@@ -1,59 +1,58 @@
 <div class="shopping-card clear-fix">
-				<h3>Your Shopping Cart</h3>
-				<a href="#" class="shopping-card-continue">Continue shopping</a>
-				<table class="shopping-card-list">
-					<thead>
-						<tr>
-							<td class="shopping-card-list-item">item</td>
-							<td class="shopping-card-list-quantity">quantity</td>
-							<td class="shopping-card-list-price">price</td>
-							<td class="shopping-card-list-change">change</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-							<img src="img/photo2.png" alt=""><span class="item-name">PERSONAL SHOPPER PACKAGE</span>
-							</td>
-							<td>
-								<button>-</button>
-								<span class="counter">1</span>
-								<button>+</button>
-							</td>
-							<td>$69.00</td>
-							<td>
-								<button class="remove">x</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<table class="shopping-card-summary">
-					<tfoot>
-						<tr>
-							<td><a href="#">add promo code</a></td>
-							<td>total</td>
-							<td>$69.00</td>
-						</tr>
-					</tfoot>
-					<tbody>
-						<tr>
-							<td></td>
-							<td>subtotal</td>
-							<td>$69.00</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>tax</td>
-							<td>$0.00</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>shipping</td>
-							<td>$0.00</td>
-						</tr>
-					</tbody>
-				</table>
-				<a href="#" class="button button-color">next - payment</a>
-				<a href="#" class="button button-transparent">Happiness Guarantee!</a>
-			</div>
-		</div>
+	<h3>Your Shopping Cart<a href="#" class="shopping-card-continue">Continue shopping</a></h3>
+	<table class="shopping-card-list">
+		<thead>
+			<tr>
+				<td class="shopping-card-list-item">item</td>
+				<td class="shopping-card-list-quantity">quantity</td>
+				<td class="shopping-card-list-price">price</td>
+				<td class="shopping-card-list-change">change</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in CartCtrl.order.cart">
+				<td>
+				<img ng-src="{{item.imgUrl}}" alt="">
+				<span class="item-name">{{item.itemName}}</span>
+				</td>
+				<td>
+					<button ng-click="CartCtrl.decrement($index)" class="count-button">-</button>
+					<span class="counter">{{item.quantity}}</span>
+					<button ng-click="CartCtrl.increment($index)" class="count-button">+</button>
+				</td>
+				<td>{{item.price*item.quantity | currency}}</td>
+				<td>
+					<button class="remove count-button" ng-click="CartCtrl.remove($index)">x</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="shopping-card-summary">
+		<tfoot>
+			<tr>
+				<td><a href="#">add promo code</a></td>
+				<td>total</td>
+				<td>{{CartCtrl.subtotal + CartCtrl.order.tax + CartCtrl.order.shipping | currency}}</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td></td>
+				<td>subtotal</td>
+				<td>{{CartCtrl.subtotal | currency}}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>tax</td>
+				<td>{{CartCtrl.order.tax | currency}}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>shipping</td>
+				<td>{{CartCtrl.order.shipping | currency}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<button ng-disabled="CartCtrl.subtotal<=0" class="button button-color" ng-click="CartCtrl.goToPayment()">next - payment</button>
+	<button class="button button-transparent">Happiness Guarantee!</button>
+</div>

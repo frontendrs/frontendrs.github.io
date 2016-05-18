@@ -32,7 +32,8 @@ main{
 		position: relative;
 
 		@include media("<tablet") {
-			width: 100%;
+			width: 20em;
+			margin: 2.125em auto 1.875em;
 			padding: 0;
 			}
 
@@ -60,10 +61,9 @@ main{
 				}
 
 			@include media("<tablet") {
-				width: 11%;
 				min-width: 92px;
 				font-size: 0.8rem;
-				margin: 0;
+				margin: 0 5px;
 				}
 
 			&::before{

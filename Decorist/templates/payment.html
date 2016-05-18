@@ -1,0 +1,58 @@
+<div class="shopping-card">
+	<h3>Your Billing Information</h3>
+	<form class="form-paymnet clear-fix" ng-submit="PaymentCtrl.goToInfo()">
+		<label for="first-name" class="for-first-name">first name
+			<input type="text" id="first-name" required>
+		</label>
+		<label for="last-name" class="for-last-name">last name
+			<input type="text" id="last-name" required>
+		</label>
+		<label for="zip-code" class="for-zip-code">zip code
+			<input type="text" id="zip-code" class="zip-code" required>
+		</label>
+		<label for="card-number">card number
+			<input type="text" pattern="[0-9]{16}" id="card-number" class="card-number" required>
+		</label>
+		<fieldset>
+			<label for="date-mounth" class="for-date-mounth">expiration date</label>
+			<select name="date-mounth" id="date-mounth" size="1">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12" selected>12</option>
+			</select>
+			<select name="date-year" id="date-year" size="1">
+				<option value="2016" selected>2016</option>
+				<option value="2017">2017</option>
+				<option value="2018">2018</option>
+				<option value="2019">2019</option>
+				<option value="2020">2020</option>
+				<option value="2021">2021</option>
+				<option value="2022">2022</option>
+				<option value="2023">2023</option>
+				<option value="2024">2024</option>
+				<option value="2025">2025</option>
+				<option value="2026">2026</option>
+				<option value="2027">2027</option>
+				
+			</select>
+		</fieldset>
+		<label for="cvv" class="for-cvv">
+			cvv
+			<input type="text" id="cvv" class="cvv" pattern="[0-9]{3}" required></label>
+		<label for="save-card" class="for-save-card">
+			<input type="checkbox" id="save-card">
+			Save card for future use
+		</label>
+		<button class="button button-color" type="submit">Place order</button>
+		<button class="button button-transparent">Happiness Guarantee!</button>
+	</form>
+</div>

@@ -59,6 +59,7 @@ a:hover{
 	float: right;
 	text-align: center;
 	margin-top: 10px;
+	cursor: pointer;
 
 	&-color{
 		background: $light-blue;
@@ -71,6 +72,7 @@ a:hover{
 		color: $light-blue;
 		font-family: "Justus Italic";
 		font-size: 0.785em;
+		background: transparent;
 	}
 }
 	

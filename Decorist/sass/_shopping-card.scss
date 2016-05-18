@@ -16,7 +16,6 @@
 		font-family: "Justus Italic";
 		font-weight: normal;
 		margin: 15px 0 0 0;
-		position: relative;
 
 		&::after{
 			content: '';
@@ -32,20 +31,13 @@
 	}
 
 	&-continue{
-		display: block;
+		display: inline-block;
 		line-height: 24px;
 		font-size: 0.625em;
 		color: $light-blue;
 		text-transform: uppercase;
 		text-decoration: none;
-		position: absolute;
-		top: 28px;
-		left: 210px;
-
-		@include media("<tablet") {
-			position: static;
-			margin: 10px 0;
-		}
+		margin-left: 10px;
 	}
 
 	table{
@@ -93,63 +85,55 @@
 			float: left;
 
 			@include media("<=tablet") {
-			width: 25%;
-			height: auto;
-		}
-			@include media("<tablet") {
 			display: none;
 		}
 	}
 
-		.item-name{
-			display: block;
-			float: left;
-			height: 3.75rem;
-			line-height: 3.75rem;
-			vertical-align: middle;
-			// padding: 15px 0;
+	.item-name{
+		display: block;
+		float: left;
+		height: 3.75rem;
+		line-height: 3.75rem;
+		vertical-align: middle;
 
-			@include media("<=tablet") {
-				line-height: 1.5;
-				padding-top: 15px;
-				width: 50%;
+		@include media("<tablet") {
+			width: 60px;
+			line-height: 2;
 		}
-		}
+	}
 
-		button{
-			width: 11px;
-			line-height: 11px;
-			padding: 0;
-			border-radius: 50%;
-			border: none;
-			background: $light-blue;
-			font-size: 9px;
-			color: #fff;
-			position: relative;
-			cursor: pointer;
-		}
+	.count-button{
+		width: 11px;
+		line-height: 11px;
+		padding: 0;
+		border-radius: 50%;
+		border: none;
+		background: $light-blue;
+		font-size: 9px;
+		color: #fff;
+		position: relative;
+		cursor: pointer;
+	}
 
-		.remove::after{
-			content: 'remove';
-			display: block;
-			color: $light-blue;
-			text-transform: uppercase;
-			position: absolute;
-			left: 20px;
-			top: 0;
-		}
+	.remove::after{
+		content: 'remove';
+		display: block;
+		color: $light-blue;
+		text-transform: uppercase;
+		position: absolute;
+		left: 20px;
+		top: 0;
+	}
 
-		.counter{
-			display: inline-block;
-			font-size: 10px;
-			margin: 0 10px;
+	.counter{
+		display: inline-block;
+		font-size: 10px;
+		margin: 0 10px;
 
-			@include media("<tablet") {
-			margin: 0 5px;
-		}
-
-
-		}
+		@include media("<tablet") {
+		margin: 0 5px;
+	}
+	}
 	}
 
 	&-summary{
@@ -196,6 +180,8 @@
 		margin-top: 15px;
 		font-size: 12px;
 		font-family: Futura;
+		border: none;
+		padding: 0;
 
 		@include media("<tablet") {
 			width: 48%;
@@ -209,7 +195,6 @@
 	float: right;
 	width: 32%;
 	height: auto;
-	// height: 21.875rem;
 	border: 3px solid $almost-white-grey;
 
 		@include media("<tablet") {
