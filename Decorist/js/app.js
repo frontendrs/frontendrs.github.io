@@ -20,6 +20,7 @@ app.value('order', {
 
 app.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise('/cart');
+	
 	$stateProvider
 			.state('cart', {
 				url: '/cart',
