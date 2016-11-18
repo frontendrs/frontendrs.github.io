@@ -14,19 +14,24 @@ body{
 h1,
 h3{
 	font-family: 'Indie Flower', cursive;
+	color: #fff;
 }
 
 h1{
-	color: #fff;
 	font-size: 25px;
 	line-height: 1;
-	margin: 20px 0;
+	margin: 20px 0 0;
 	text-align: center;
 }
 
 h3{
 	font-size: 18px;
 	margin: 10px 0 0;
+}
+h4{
+	text-align: center;
+	color: #fff;
+	margin: 0 0 20px 0;
 }
 main{
 	padding: 0 20px;
@@ -114,6 +119,11 @@ main a{
 	h1{
 		color: #211F1E;
 		font-size: 70px;
+	}
+	h4{
+		color: #211F1E;
+		font-size: 28px;
+		margin-bottom: 30px;
 	}
 	h3{
 		font-size: 28px;
